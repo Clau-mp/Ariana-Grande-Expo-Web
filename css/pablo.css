@@ -23,8 +23,107 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
 body {
-    background-color: var(--color-dark);
     color: var(--color-white);
     font-family: var(--font-main);
+}
+
+.about-body {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+
+
+/* ABOUT */
+.about-page {
+    width: 100%;
+}
+
+.about-intro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Desktop */
+.site-footer {
+    width: 100%;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+.footer-social-link {
+    color: var(--color-white);
+    font-size: var(--fs-button-desk);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.15);
+    color: var(--color-dark);
+}
+
+.footer-text {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+}
+
+.footer-legal {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-legal a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-dark);
+}
+
+.footer-legal span {
+    color: var(--color-white);
 }
