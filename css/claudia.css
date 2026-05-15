@@ -22,3 +22,40 @@
     --fs-small-desk: 0.85rem;
 
 }
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+ /* BARRA DE NAVEGACIÓN */
+ 
+header{
+    background-color: rgba(0, 0, 0, 0.41);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem;
+    margin: 1.563rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 3.126rem);
+    height: 7.5rem;
+    z-index: 9999;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo > img{
+    height: 11.25rem;
+    width: auto;
+    display: block;
+}

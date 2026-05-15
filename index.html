@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Ariana Grande Petals Experience</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Freeman&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-   
     <link rel="stylesheet" href="css/claudia.css">
+    <script src="js/claudia.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<body>
+<body class="home">
+    <header>
+            <div class="buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search our experience">
+            </div>
+            
+            <a href="#" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
+
+            <nav class="nav-desktop">
+                <ul class="menu-desktop">
+                    <li><a href="">gallery</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href="about.html">about</a></li>
+                </ul>
+                <a href="" class="btn-tickets">BUY TICKETS</a>
+            </nav>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Tickets</a></li>
+                </ul>
+            </nav>
+    </header>
 
 
 </body>
