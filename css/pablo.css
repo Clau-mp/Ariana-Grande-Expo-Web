@@ -14,10 +14,17 @@
     --fw-medium: 500;
     --fw-semibold: 700;
     --fw-bold: 900;
+
+    --fs-title-desk: 4rem;
+    --fs-subtitle-desk: 2.10rem;
+    --fs-text-desk: 1.75rem;
+    --fs-button-desk: 1.5rem;
+    --fs-small-desk: 0.85rem;
+
 }
 
 body {
-    background-color: var(--color-white);
-    color: var(--color-black);
+    background-color: var(--color-dark);
+    color: var(--color-white);
     font-family: var(--font-main);
 }
