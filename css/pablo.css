@@ -23,8 +23,206 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
 body {
-    background-color: var(--color-dark);
     color: var(--color-white);
     font-family: var(--font-main);
+}
+
+.about-body {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+
+
+/* ABOUT */
+.about-page {
+    width: 100%;
+}
+
+.about-intro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.about-text {
+    width: 70%;
+}
+
+.about-text p {
+    font-size: var(--fs-text-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.about-polaroids {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-polaroids img {
+    width: 75%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.about-brands {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--color-beige);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-brands img {
+    max-width: 130px;
+    max-height: 45px;
+    object-fit: contain;
+}
+
+.about-video-section {
+    width: 100%;
+}
+
+.about-video {
+    width: 100%;
+    height: 520px;
+    display: block;
+    object-fit: cover;
+}
+
+.about-content {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+}
+
+.about-content p {
+    font-size: var(--fs-text-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.about-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.about-gallery img {
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/* BUTTONS */
+.main-button {
+    display: block;
+    width: fit-content;
+    margin: 4rem auto 0;
+    padding: 1rem 3rem;
+    border-radius: 999px;
+    background-color: var(--color-beige);
+    color: var(--color-white);
+    font-size: var(--fs-button-desk);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: var(--color-dark);
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* FOOTER DESKTOP */
+.site-footer {
+    width: 100%;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+.footer-social-link {
+    color: var(--color-white);
+    font-size: var(--fs-button-desk);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.15);
+    color: var(--color-dark);
+}
+
+.footer-text {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+}
+
+.footer-legal {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-legal a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-dark);
+}
+
+.footer-legal span {
+    color: var(--color-white);
 }
