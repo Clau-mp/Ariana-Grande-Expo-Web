@@ -7,4 +7,12 @@
     --color-green: #8F9A87;
     --color-beige: #B9AB9A;
     --color-cream: #F5F5F5;
+
+    --font-main: "STIX Two Text", serif;
+
+    --fw-regular: 400;
+    --fw-medium: <  500;
+    --fw-semibold: 700;
+    --fw-bold: 900;
 }
+
