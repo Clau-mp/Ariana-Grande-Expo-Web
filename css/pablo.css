@@ -1,0 +1,23 @@
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-dark: #1A1A1A;
+    --color-grey: #343434;
+    --color-brown: #5E5148;
+    --color-green: #8F9A87;
+    --color-beige: #B9AB9A;
+    --color-cream: #F5F5F5;
+
+    --font-main: "STIX Two Text", serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 700;
+    --fw-bold: 900;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-main);
+}
