@@ -21,6 +21,7 @@
     --fs-button-desk: 1.5rem;
     --fs-small-desk: 0.85rem;
 
+    --fs-about-text-desk: 1.25rem;
 }
 
 * {
@@ -48,43 +49,65 @@ body {
 }
 
 .about-intro {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 4rem 0 2.5rem;
+    padding: 7rem 0 5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 3rem;
 }
 
+
 .about-text {
-    width: 70%;
+    width: 60%;
 }
 
 .about-text p {
-    font-size: var(--fs-text-desk);
+    font-size: var(--fs-about-text-desk);
     font-weight: var(--fw-regular);
     line-height: 1.25;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
+
 .about-polaroids {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 28%;
+    position: relative;
+    min-height: 500px;
+    margin-right: 4rem;
 }
 
 .about-polaroids img {
-    width: 75%;
+    width: 56%;
     display: block;
-    margin-bottom: 1rem;
+    position: absolute;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38);
 }
+
+.about-polaroids img:first-child {
+    top: -1rem;
+    right: 1rem;
+    transform: rotate(-8deg);
+}
+
+.about-polaroids img:nth-child(2) {
+    top: 7rem;
+    left: -2rem;
+    transform: rotate(13deg);
+}
+
+.about-polaroids img:last-child {
+    top: 17rem;
+    right: 1rem;
+    transform: rotate(-10deg);
+}
+
 
 .about-brands {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1.8rem 2rem;
     background-color: var(--color-beige);
     display: flex;
     justify-content: space-around;
@@ -98,6 +121,7 @@ body {
     object-fit: contain;
 }
 
+
 .about-video-section {
     width: 100%;
 }
@@ -109,11 +133,12 @@ body {
     object-fit: cover;
 }
 
+
 .about-content {
     width: 95%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 3rem 0 5rem;
+    padding: 4rem 0 12rem;
 }
 
 .about-content p {
@@ -122,6 +147,7 @@ body {
     line-height: 1.25;
     margin-bottom: 2rem;
 }
+
 
 .about-gallery {
     display: flex;
