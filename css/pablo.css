@@ -31,6 +31,11 @@
 }
 
 /* GENERAL */
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     color: var(--color-white);
     font-family: var(--font-main);
@@ -106,67 +111,50 @@ body {
 
 
 .about-brands {
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
     padding: 1.4rem 0;
     background-color: var(--color-beige);
     overflow: hidden;
 }
 
-.about-brands img {
-    width: 220px;
-    height: 90px;
-    object-fit: contain;
-    transform: scale(1.45);
-}
-
-.about-brands img:first-child {
-  width: 130px;
-  height: 35px;
-  /* MAC */
-}
-
-.about-brands img:nth-child(2) {
-  width: 150px;
-  height: 42px;
-  /* r.e.m. beauty */
-}
-
-.about-brands img:nth-child(3) {
-  width: 95px;
-  height: 42px;
-  /* Givenchy */
-}
-
-.about-brands img:nth-child(4) {
-  width: 115px;
-  height: 35px;
-  /* Swarovski */
-}
-
-.about-brands img:nth-child(5) {
-  width: 125px;
-  height: 42px;
-  /* Reebok */
-}
-
-.about-brands img:last-child {
-  width: 135px;
-  height: 38px;
-  /* Starbucks */
-}
-
 .brands-track {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 4.75rem;
     width: max-content;
-    animation: brands-loop 35s linear infinite;
+    animation: brands-loop 40s linear infinite;
 }
 
-.brands-track img {
-    width: 180px;
-    height: 70px;
+.brand-logo {
+    width: auto;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-mac {
+    height: 6rem;
+}
+
+.brand-rem {
+    height: 7rem;
+}
+
+.brand-givenchy {
+    height: 7.15rem;
+}
+
+.brand-swarovski {
+    height: 10rem;
+}
+
+.brand-reebok {
+    height: 6rem;
+}
+
+.brand-starbucks {
+    height: 7rem;
 }
 
 @keyframes brands-loop {
@@ -181,7 +169,8 @@ body {
 
 
 .about-video-section {
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
 }
 
 .about-video {
@@ -214,13 +203,12 @@ body {
     margin-bottom: 4rem;
 
     display: flex;
-    gap: 3rem;
+    gap: 3.75rem;
 
     overflow-x: auto;
     overflow-y: hidden;
 
-    padding: 0 2rem 1rem;
-
+    padding: 2rem;
     cursor: grab;
     scrollbar-width: none;
 }
@@ -234,8 +222,8 @@ body {
 }
 
 .about-gallery img {
-    flex: 0 0 24rem;
-    height: 17rem;
+    flex: 0 0 22rem;
+    height: 22rem;
     object-fit: cover;
     user-select: none;
     -webkit-user-drag: none;
