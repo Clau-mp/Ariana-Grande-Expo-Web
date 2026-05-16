@@ -107,12 +107,9 @@ body {
 
 .about-brands {
     width: 100%;
-    padding: 1.4rem 2rem;
+    padding: 1.4rem 0;
     background-color: var(--color-beige);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
+    overflow: hidden;
 }
 
 .about-brands img {
@@ -156,6 +153,30 @@ body {
   width: 135px;
   height: 38px;
   /* Starbucks */
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    width: max-content;
+    animation: brands-loop 35s linear infinite;
+}
+
+.brands-track img {
+    width: 180px;
+    height: 70px;
+    object-fit: contain;
+}
+
+@keyframes brands-loop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 
