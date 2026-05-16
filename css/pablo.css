@@ -200,7 +200,7 @@ body {
 }
 
 .about-content p {
-    font-size: var(--fs-text-desk);
+    font-size: var(--fs-about-text-desk);
     font-weight: var(--fw-regular);
     line-height: 1.25;
     margin-bottom: 2rem;
@@ -208,16 +208,37 @@ body {
 
 
 .about-gallery {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
     display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
-    gap: 2rem;
+    gap: 3rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 2rem 1rem;
+
+    cursor: grab;
+    scrollbar-width: none;
+}
+
+.about-gallery:active {
+    cursor: grabbing;
+}
+
+.about-gallery::-webkit-scrollbar {
+    display: none;
 }
 
 .about-gallery img {
-    width: 25%;
-    aspect-ratio: 1 / 1;
+    flex: 0 0 24rem;
+    height: 17rem;
     object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 
