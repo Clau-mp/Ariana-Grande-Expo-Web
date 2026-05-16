@@ -279,7 +279,7 @@ body {
 
 /* GALLERY */
 .gallery-body {
-    
+    background-color: var(--color-beige);
 }
 
 
