@@ -107,7 +107,7 @@ body {
 
 .about-brands {
     width: 100%;
-    padding: 1.8rem 2rem;
+    padding: 1.4rem 2rem;
     background-color: var(--color-beige);
     display: flex;
     justify-content: space-around;
@@ -116,9 +116,46 @@ body {
 }
 
 .about-brands img {
-    max-width: 130px;
-    max-height: 45px;
+    width: 220px;
+    height: 90px;
     object-fit: contain;
+    transform: scale(1.45);
+}
+
+.about-brands img:first-child {
+  width: 130px;
+  height: 35px;
+  /* MAC */
+}
+
+.about-brands img:nth-child(2) {
+  width: 150px;
+  height: 42px;
+  /* r.e.m. beauty */
+}
+
+.about-brands img:nth-child(3) {
+  width: 95px;
+  height: 42px;
+  /* Givenchy */
+}
+
+.about-brands img:nth-child(4) {
+  width: 115px;
+  height: 35px;
+  /* Swarovski */
+}
+
+.about-brands img:nth-child(5) {
+  width: 125px;
+  height: 42px;
+  /* Reebok */
+}
+
+.about-brands img:last-child {
+  width: 135px;
+  height: 38px;
+  /* Starbucks */
 }
 
 
