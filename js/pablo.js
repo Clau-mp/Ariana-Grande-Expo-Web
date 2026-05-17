@@ -64,14 +64,6 @@ ticketInputs.forEach(function (input) {
     input.addEventListener("input", calculateTicketsTotal);
 });
 
-const ticketsForm = document.querySelector(".tickets-form");
-
-if (ticketsForm) {
-    ticketsForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-    });
-}
-
 
 
 // BARRA DE NAVEGACIÓN
