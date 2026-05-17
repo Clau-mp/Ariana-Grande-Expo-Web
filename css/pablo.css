@@ -44,12 +44,13 @@ body {
 .about-body {
     background-color: var(--color-brown);
     color: var(--color-white);
+    padding-top: 11.5rem;
 }
 
 
 /* HEADER */
 header{
-    background-color: rgba(0, 0, 0, 0.41);
+    background-color: rgba(0, 0, 0, 0.625);
     display: flex;
     align-items: center;
     align-content: center;
@@ -515,19 +516,20 @@ header{
 .tickets-body {
     background-color: var(--color-dark);
     color: var(--color-white);
+    padding-top: 11.5rem;
 }
 
 .tickets-page {
     width: 95%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 4rem 0 7rem;
+    padding: 0 0 7rem;
 }
 
 .tickets-hero {
     display: flex;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 .tickets-hero img {
@@ -544,6 +546,10 @@ header{
     font-size: var(--fs-subtitle-desk);
     font-style: italic;
     margin-bottom: 2rem;
+}
+
+.tickets-subtitle {
+    margin-bottom: 1rem;
 }
 
 .tickets-form {
@@ -628,7 +634,8 @@ header{
 }
 
 .tickets-continue:hover {
-    background-color: var(--color-beige);
+    background-color: var(--color-black);
+    color: var(--color-white);
     transform: scale(1.05);
 }
 
