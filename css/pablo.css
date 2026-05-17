@@ -490,9 +490,10 @@ header{
 
 
 /* GALLERY */
-.gallery-body {
+.gallery1-body {
     background-color: var(--color-beige);
     color: var(--color-white);
+    padding-top: 11.5rem;
 }
 
 
@@ -764,6 +765,51 @@ header{
     color: var(--color-white);
 }
 
+
+/* FOOTER DESKTOP GALLERY */
+.site-footer-gallery {
+    width: 100%;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--color-beige);
+    color: var(--color-grey);
+    text-align: center;
+}
+
+.footer-social-link-gallery {
+    color: var(--color-grey);
+    font-size: var(--fs-button-desk);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link-gallery:hover {
+    transform: scale(1.15);
+    color: var(--color-cream);
+}
+
+.footer-legal-gallery {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-legal-gallery a {
+    color: var(--color-grey);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-gallery a:hover {
+    color: var(--color-cream);
+}
+
+.footer-legal-gallery span {
+    color: var(--color-grey);
+}
 
 
 /* FOOTER DESKTOP ABOUT */
