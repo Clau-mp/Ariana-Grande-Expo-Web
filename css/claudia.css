@@ -17,7 +17,7 @@
 
     --fs-title-desk: 4rem;
     --fs-subtitle-desk: 2.10rem;
-    --fs-text-desk: 1.75rem;
+    --fs-text-desk: 1.25rem;
     --fs-button-desk: 1.5rem;
     --fs-small-desk: 0.95rem;
 
@@ -239,7 +239,7 @@ nav > ul {
     font-style: italic;
 }
 /* Home petal experience about */
-#petals-experience-about{
+#petal-experience-about{
     width: 95%;
     max-width: 1500px;
     margin: 2rem auto;
@@ -250,34 +250,64 @@ nav > ul {
     box-sizing: border-box;
 }
 
-.petals-experience-about-video{
+.petal-experience-about-video{
     flex: 1;
     max-width: 600px;
     width: 100%;
 }
-.petals-experience-about-video > video{
+.petal-experience-about-video > video{
     width: 100%;
     height: 560px;
     object-fit: cover;
     display: block;
 }
-.petals-experience-about-content{
+.petal-experience-about-content{
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items:flex-start;
+    gap:0
 }
-.petals-experience-about-title{
+.petal-experience-about-title{
     margin: 0;
+    margin-bottom: 2.5rem;
     font-family: var(--font-main);
     font-size: var(--fs-subtitle-desk);
-    font-weight: var(--fw-semibold);
+    font-weight: var(fw);
     font-style: italic;
     color: var(--color-white);
     text-transform: uppercase;
+    align-self: center;
+    text-align: center;
+}
+.petal-experience-about-text{
+    margin: 0;
+    font-family:var(--font-main);
+    font-size: var(--fs-text-desk);
+    color: var(--color-white);
+    text-align: justify;
 }
 
+.petal-experience-about-bt {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.8rem 2.2rem;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border-radius: 3.125rem;
+    font-size: var(--fs-button-desk);
+    font-weight:var(--fw-medium) ;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin: 2rem auto 0 auto;
+
+}
+.petal-experience-about-bt:hover{
+    background-color: var(--color-white);
+    color: var(--color-green);
+}
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
     header{
