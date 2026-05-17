@@ -308,6 +308,13 @@ body {
 
 
 /* TICKETS */
+.tickets-body {
+    background-color: var(--color-dark);
+    
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
 
 
 
@@ -324,10 +331,54 @@ body {
 
 
 
+/* FOOTER DESKTOP TICKETS */
+.site-footer-tickets {
+    width: 100%;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.footer-social-link-tickets {
+    color: var(--color-white);
+    font-size: var(--fs-button-desk);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link-tickets:hover {
+    transform: scale(1.15);
+    color: var(--color-beige);
+}
+
+.footer-legal-tickets {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-legal-tickets a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-tickets a:hover {
+    color: var(--color-beige);
+}
+
+.footer-legal-tickets span {
+    color: var(--color-white);
+}
 
 
 
-/* FOOTER DESKTOP */
+/* FOOTER DESKTOP ABOUT */
 .site-footer {
     width: 100%;
     padding: 5rem 2rem 3rem;
