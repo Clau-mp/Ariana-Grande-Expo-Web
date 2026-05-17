@@ -76,6 +76,8 @@ header{
     display: flex;
     gap: 2.813rem;
     margin-left: 1.688rem;
+    padding: 0;
+    list-style: none;
  }
  .menu-desktop > li > a {
     text-decoration: none;
@@ -137,7 +139,7 @@ header{
 .header-left{
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 3.5rem;
     align-items: flex-start;
     margin-left: 3.188rem ;
 }
@@ -238,6 +240,11 @@ header{
    }
 
 
+}
+
+/* HOME  */
+.portada-img{
+    width:100% ;
 }
 
 @media (max-width: 480px){
