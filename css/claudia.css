@@ -35,6 +35,9 @@ html{
 .home{
     background-color: var(--color-dark);
     padding-top: 11.5rem;
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .portada-publi-btn{
@@ -70,7 +73,7 @@ header{
     left: 0;
     right: 0;
     width: 95%;
-    max-width: 1300px;
+    max-width: 1500px;
     height: 7.5rem;
     z-index: 9999;
     box-sizing: border-box;
@@ -185,6 +188,8 @@ header{
     display: none;
 }
 
+
+
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
     header{
@@ -259,6 +264,8 @@ header{
 }
 
 /* HOME  */
+
+/* Home portada */
 .portada{
     position: relative; 
     width: 100%;
@@ -309,10 +316,12 @@ header{
     color: var(--color-black);
     font-style: italic;
 }
+/* Home petal experience about */
 
 @media (max-width: 480px){
 
     /* BARRA DE NAVEGACIÓN */
+
     header{
         width: 90%;
         height: 4.5rem;
