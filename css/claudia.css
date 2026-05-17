@@ -35,9 +35,6 @@ html{
 .home{
     background-color: var(--color-dark);
     padding-top: 11.5rem;
-    width: 95%;
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 .portada-publi-btn{
@@ -60,7 +57,7 @@ html{
  /* BARRA DE NAVEGACIÓN */
  
 header{
-    background-color: rgba(0, 0, 0, 0.41);
+    background-color: rgba(0, 0, 0, 0.625);
     display: flex;
     align-items: center;
     align-content: center;
@@ -88,17 +85,17 @@ header{
     width: auto;
     display: block;
 }
- nav > ul {
+nav > ul {
     list-style: none;
  }
 
- .menu-desktop{
+.menu-desktop{
     display: flex;
     gap: 2.813rem;
     margin-left: 1.688rem;
     padding: 0;
  }
- .menu-desktop > li > a {
+.menu-desktop > li > a {
     text-decoration: none;
     color:var(--color-white);
     font-family: var(--font-main);
@@ -108,11 +105,11 @@ header{
     transition: opacity 0.3s ease;
  }
 
- .menu-desktop:hover > li > a {
+.menu-desktop:hover > li > a {
     opacity: 0.4;
     transition: opacity 0.3s ease;
  }
- .menu-desktop> li > a:hover{
+.menu-desktop> li > a:hover{
     opacity: 1;
  }
 
@@ -188,7 +185,98 @@ header{
     display: none;
 }
 
+/* HOME  */
 
+/* Home portada */
+.portada{
+    position: relative; 
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.portada-img{
+   width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.portada-img > img{
+    width: 100%;
+    height: 48rem;
+    display: block;
+    object-fit: cover;
+}
+.portada-publi {
+    position: absolute;
+    bottom: 2.188rem;
+    right: 2.188rem;
+    background-color: var(--color-white);
+    padding: 1.375rem 2.188rem;
+    gap: 2.188rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-main);
+}
+
+.portada-publi-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.publi-text-title{
+    margin: 0;
+    font-size: var(--fs-text-desk);
+    color: var(--color-black);
+    font-weight: var(--fw-bold);
+    font-style: italic;
+}
+
+.publi-text-subtitle{
+    margin: 0;
+    font-size: var(--fs-small-desk);
+    color: var(--color-black);
+    font-style: italic;
+}
+/* Home petal experience about */
+#petals-experience-about{
+    width: 95%;
+    max-width: 1500px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    box-sizing: border-box;
+}
+
+.petals-experience-about-video{
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+}
+.petals-experience-about-video > video{
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+.petals-experience-about-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.petals-experience-about-title{
+    margin: 0;
+    font-family: var(--font-main);
+    font-size: var(--fs-subtitle-desk);
+    font-weight: var(--fw-semibold);
+    font-style: italic;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
 
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
@@ -263,60 +351,6 @@ header{
 
 }
 
-/* HOME  */
-
-/* Home portada */
-.portada{
-    position: relative; 
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-.portada-img{
-   width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-.portada-img > img{
-    width: 100%;
-    height: 48rem;
-    display: block;
-    object-fit: cover;
-}
-.portada-publi {
-    position: absolute;
-    bottom: 2.188rem;
-    right: 2.188rem;
-    background-color: var(--color-white);
-    padding: 1.375rem 2.188rem;
-    gap: 2.188rem;
-    display: flex;
-    align-items: center;
-    font-family: var(--font-main);
-}
-
-.portada-publi-text{
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-.publi-text-title{
-    margin: 0;
-    font-size: var(--fs-text-desk);
-    color: var(--color-black);
-    font-weight: var(--fw-bold);
-    font-style: italic;
-}
-
-.publi-text-subtitle{
-    margin: 0;
-    font-size: var(--fs-small-desk);
-    color: var(--color-black);
-    font-style: italic;
-}
-/* Home petal experience about */
 
 @media (max-width: 480px){
 
