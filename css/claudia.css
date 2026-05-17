@@ -42,16 +42,21 @@ html{
 header{
     background-color: rgba(0, 0, 0, 0.41);
     display: flex;
+    align-items: center;
+    align-content: center;
     justify-content: space-between;
-    padding: 0.4rem;
-    margin: 1.563rem;
+    padding: 0.2rem;
+    margin: 0 auto;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 1.563rem;
     left: 0;
-    width: calc(100% - 3.126rem);
+    right: 0;
+    width: 95%;
+    max-width: 1300px;
     height: 7.5rem;
     z-index: 9999;
+    box-sizing: border-box;
 }
 .logo{
     display: flex;
@@ -70,14 +75,24 @@ header{
  .menu-desktop{
     display: flex;
     gap: 2.813rem;
+    margin-left: 1.688rem;
  }
  .menu-desktop > li > a {
     text-decoration: none;
     color:var(--color-white);
     font-family: var(--font-main);
     font-weight: var(--fw-medium);
-    font-size: var( --fs-small-desk);
+    font-size: 1.125rem;
     text-transform: lowercase;
+    transition: opacity 0.3s ease;
+ }
+
+ .menu-desktop:hover > li > a {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+ }
+ .menu-desktop> li > a:hover{
+    opacity: 1;
  }
 
 .menu-mobile > li > a {
@@ -89,6 +104,13 @@ header{
     text-transform: lowercase;
 
 }
+.menu-mobile:hover > li > a {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+.menu-mobile > li > a:hover{
+    opacity: 1;
+}
 .buscador{
     display: flex;
     align-items: center;
@@ -96,7 +118,8 @@ header{
 }
 .buscador > i{
     color: var(--color-white);
-    font-size: 0.90 rem;
+    font-size: 1.25rem;
+   
 }
 
 .buscador > input{
@@ -106,7 +129,7 @@ header{
     color: var(--color-white);
     padding-bottom: 0.188rem;
     outline: none;
-    font-size: var(--fs-small-desk);
+    font-size: 0.75rem;
     font-family: var(--font-main);
     width: 150px;
 }
@@ -116,7 +139,7 @@ header{
     flex-direction: column;
     gap: 1.25rem;
     align-items: flex-start;
-    margin-left: 3.125rem;
+    margin-left: 3.188rem ;
 }
 
 .btn-tickets {
@@ -128,7 +151,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     color: var(--color-white);
-    font-size: var(--fw-medium);
+    font-size: 1.25rem;
     font-family: var(--font-main);
     font-style: italic;
     text-decoration: none;
@@ -136,4 +159,110 @@ header{
     width: 240px;
     height: 70px;
     border: none;
+    margin-right: 2.188rem;
+    transition: opacity 0.3s ease;
+}
+
+.ham, .nav-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+ /* BARRA DE NAVEGACIÓN */
+    header{
+        width: 95%;
+        height: 5.5rem;
+        padding: 0 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
+   .menu-desktop, .btn-tickets , .nav-desktop{
+        display: none;
+   }
+
+   .ham{
+        display: block;
+        cursor: pointer;
+        z-index: 9999;
+   }
+   .ham > i {
+    color: var(--color-white);
+    font-size: 2.2rem;
+   }
+   .header-left{
+        margin-left: 0;
+        gap: 0;
+   }
+   .buscador > input {
+     width: 130px;
+     font-size: 0.85rem;
+   }
+   .logo > img {
+        height: 7rem;
+        width: auto;
+        display: block;
+   }
+   .nav-mobile{
+     display: flex;
+     flex-direction: column;
+       align-items: center;
+     justify-content: center;
+     position: fixed;
+     top: 0;
+     left:-100%;
+     width: 100vw;
+        height: 100vh;
+        background-color: #1a1a1aad;
+        z-index: 9998;
+        transition: left 0.4s ease;
+    }
+   .menu-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu-mobile > li > a {
+        font-size: var(--fs-subtitle-desk);
+        color: var(--color-white);
+        font-family: var(--font-main);
+        text-transform: lowercase;
+        text-decoration: none;
+   }
+   .buscador > i {
+    font-size: 1.5rem;
+   }
+
+
+}
+
+@media (max-width: 480px){
+
+    /* BARRA DE NAVEGACIÓN */
+    header{
+        width: 90%;
+        height: 4.5rem;
+        padding: 0 1.2rem;
+        top: 1rem;
+    }
+
+    .buscador > input{
+        display: none;
+    }
+    .buscador > i {
+        font-size: 1.8rem;
+
+    }
+
+    .logo> img {
+        height: 5.5rem;
+        width: auto;
+    }
+    .ham > i {
+        font-size: var(--fs-subtitle-desk);
+    }
 }
