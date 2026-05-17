@@ -19,7 +19,7 @@
     --fs-subtitle-desk: 2.10rem;
     --fs-text-desk: 1.75rem;
     --fs-button-desk: 1.5rem;
-    --fs-small-desk: 0.85rem;
+    --fs-small-desk: 0.95rem;
 
 }
 
@@ -34,7 +34,24 @@ html{
 }
 .home{
     background-color: var(--color-dark);
-    padding-top: 12.5rem;
+    padding-top: 11.5rem;
+}
+
+.portada-publi-btn{
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 3.125rem;
+    padding: 0.75rem 1.75rem;
+    font-size: var(--fs-button-desk);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.portada-publi-btn:hover{
+    background-color: var(--color-green);
+    color: var(--color-brown);
 }
 
  /* BARRA DE NAVEGACIÓN */
@@ -242,8 +259,55 @@ header{
 }
 
 /* HOME  */
-.portada-img{
+.portada{
+    position: relative; 
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.portada-img{
+   width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.portada-img > img{
+    width: 100%;
+    height: 48rem;
+    display: block;
+    object-fit: cover;
+}
+.portada-publi {
+    position: absolute;
+    bottom: 2.188rem;
+    right: 2.188rem;
+    background-color: var(--color-white);
+    padding: 1.375rem 2.188rem;
+    gap: 2.188rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-main);
+}
+
+.portada-publi-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.publi-text-title{
+    margin: 0;
+    font-size: var(--fs-text-desk);
+    color: var(--color-black);
+    font-weight: var(--fw-bold);
+    font-style: italic;
+}
+
+.publi-text-subtitle{
+    margin: 0;
+    font-size: var(--fs-small-desk);
+    color: var(--color-black);
+    font-style: italic;
 }
 
 @media (max-width: 480px){
