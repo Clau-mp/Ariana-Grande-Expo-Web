@@ -1,3 +1,4 @@
+// ABOUT
 const gallery = document.querySelector(".about-gallery");
 
 let isDragging = false;
@@ -33,3 +34,7 @@ if (gallery) {
     gallery.classList.remove("dragging");
   });
 }
+
+
+
+// GALLERY
