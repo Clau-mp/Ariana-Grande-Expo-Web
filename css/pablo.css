@@ -55,7 +55,7 @@ body {
 
 .about-intro {
     width: 95%;
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 7rem 0 5rem;
     display: flex;
@@ -238,7 +238,7 @@ body {
 
 
 
-/* BUTTONS */
+/* BUTTONS ABOUT */
 .main-button-about {
     display: block;
     width: fit-content;
@@ -280,6 +280,7 @@ body {
 /* GALLERY */
 .gallery-body {
     background-color: var(--color-beige);
+    color: var(--color-white);
 }
 
 
@@ -310,12 +311,15 @@ body {
 /* TICKETS */
 .tickets-body {
     background-color: var(--color-dark);
-    
-    width: 95%;
-    max-width: 1300px;
-    margin: 0 auto;
+    color: var(--color-white);
 }
 
+.tickets-page {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0 7rem;
+}
 
 
 
