@@ -405,6 +405,7 @@ header{
 
 .about-gallery {
     width: 100vw;
+    max-width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -417,10 +418,13 @@ header{
 
     padding: 2rem;
     cursor: grab;
+
+    scroll-behavior: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
-.about-gallery:active {
+.about-gallery.dragging {
     cursor: grabbing;
 }
 
@@ -429,11 +433,15 @@ header{
 }
 
 .about-gallery img {
-    flex: 0 0 22rem;
+    flex: 0 0 auto;
+    width: 22rem;
     height: 22rem;
     object-fit: cover;
+
     user-select: none;
+    -webkit-user-select: none;
     -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 
@@ -683,10 +691,6 @@ header{
 
 
 }
-
-
-
-
 
 
 

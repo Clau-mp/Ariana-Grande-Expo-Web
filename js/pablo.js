@@ -1,39 +1,35 @@
 // ABOUT
-const gallery = document.querySelector(".about-gallery");
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector(".about-gallery");
 
-let isDragging = false;
-let startX;
-let scrollStart;
+    if (!gallery) return;
 
-if (gallery) {
-  gallery.addEventListener("mousedown", function (event) {
-    isDragging = true;
-    startX = event.pageX;
-    scrollStart = gallery.scrollLeft;
-    gallery.classList.add("dragging");
-  });
+    let isDragging = false;
 
-  gallery.addEventListener("mousemove", function (event) {
-    if (isDragging === false) {
-      return;
-    }
+    gallery.addEventListener("pointerdown", function (e) {
+        isDragging = true;
+        gallery.setPointerCapture(e.pointerId);
+        gallery.classList.add("dragging");
+    });
 
-    event.preventDefault();
+    gallery.addEventListener("pointermove", function (e) {
+        if (!isDragging) return;
 
-    let distance = event.pageX - startX;
-    gallery.scrollLeft = scrollStart - distance;
-  });
+        e.preventDefault();
+        gallery.scrollLeft -= e.movementX;
+    });
 
-  gallery.addEventListener("mouseup", function () {
-    isDragging = false;
-    gallery.classList.remove("dragging");
-  });
+    gallery.addEventListener("pointerup", function (e) {
+        isDragging = false;
+        gallery.releasePointerCapture(e.pointerId);
+        gallery.classList.remove("dragging");
+    });
 
-  gallery.addEventListener("mouseleave", function () {
-    isDragging = false;
-    gallery.classList.remove("dragging");
-  });
-}
+    gallery.addEventListener("pointercancel", function () {
+        isDragging = false;
+        gallery.classList.remove("dragging");
+    });
+});
 
 
 
