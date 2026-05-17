@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TICKETS</title>
         
-    <link rel="stylesheet" href="css/claudia.css">
     <link rel="stylesheet" href="css/pablo.css">
+    <script src="js/pablo.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,38 @@
 
 <body class="tickets-body">
     
+    <header>
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="">gallery</a></li>
+                        <li><a href="">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
+
+            <a href="" class="btn-tickets">BUY TICKETS</a>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Tickets</a></li>
+                </ul>
+            </nav>
+    </header>
 
     <main class="tickets-page">
 
@@ -129,7 +161,7 @@
 
     </main>
 
-    
+
 
 
 <footer class="site-footer-tickets">
@@ -173,6 +205,5 @@
 
     </footer>
     
-    <script src="js/pablo.js"></script>
 </body>
 </html>

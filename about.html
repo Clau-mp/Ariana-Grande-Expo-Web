@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT</title>
-
+        
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Freeman&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
+        
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-   
+        
+    <script src="js/pablo.js"></script>
     <link rel="stylesheet" href="css/pablo.css">
 </head>
 
 <body class="about-body">
 
-    <header>
+        <header>
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="">gallery</a></li>
+                        <li><a href="">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
 
+            <a href="" class="btn-tickets">BUY TICKETS</a>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Tickets</a></li>
+                </ul>
+            </nav>
     </header>
 
 
@@ -152,7 +182,6 @@
 
     </footer>
     
-    <script src="js/pablo.js"></script>
 </body>
 
 
