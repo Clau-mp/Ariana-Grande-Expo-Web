@@ -239,7 +239,7 @@ body {
 
 
 /* BUTTONS */
-.main-button {
+.main-button-about {
     display: block;
     width: fit-content;
     margin: 4rem auto 0;
@@ -254,7 +254,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.main-button:hover {
+.main-button-about:hover {
     background-color: var(--color-dark);
     transform: scale(1.05);
 }
