@@ -15,23 +15,24 @@
 
 <body class="home">
     <header>
-            <div class="buscador">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search our experience">
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="">gallery</a></li>
+                        <li><a href="">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
             </div>
-            
             <a href="#" class="logo">
                 <img src="media/img/Logo_expo.webp">
             </a>
 
-            <nav class="nav-desktop">
-                <ul class="menu-desktop">
-                    <li><a href="">gallery</a></li>
-                    <li><a href="">contact</a></li>
-                    <li><a href="about.html">about</a></li>
-                </ul>
-                <a href="" class="btn-tickets">BUY TICKETS</a>
-            </nav>
+            <a href="" class="btn-tickets">BUY TICKETS</a>
             <div class="ham">
                 <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
                 <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
@@ -45,6 +46,20 @@
                 </ul>
             </nav>
     </header>
+    <main class="main-content">
+        <section class="portada">
+            <div class="portada-img">
+                <img src="media/img/petal_portada.webp" alt="petals experience">
+            </div>
+            <div class="portada-publi">
+                <div portada-publi-text>
+                    <p class="publi-text-subtitle">A magical experience inspired by the new album!</p>
+                    <p class="publi-text-title">Don´t miss out! Get your tickets now!</p>
+                </div>
+                <a href="." class="portada-publi-btn">BUY TICKETS</a>
+            </div>
+        </section>
+    </main>
 
 
 </body>
