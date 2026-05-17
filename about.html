@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT</title>
-
+        
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Freeman&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
+        
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        
+    <script src="js/pablo.js"></script>
     <link rel="stylesheet" href="css/pablo.css">
 </head>
 
 <body class="about-body">
 
-    <header>
+        <header>
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a href="contactme.html">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
 
+            <a href="tickets.html" class="btn-tickets">BUY TICKETS</a>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                </ul>
+            </nav>
     </header>
 
 
@@ -88,12 +118,12 @@
                 <img src="media/img/gallery-1.webp" alt="Album 1">
                 <img src="media/img/gallery-2.webp" alt="Album 2">
                 <img src="media/img/gallery-3.webp" alt="Album 3">
-                <img src="media/img/gallery-4.webp" alt="Album 4">
+                <img src="media/img/gallery-4.1.webp" alt="Album 4">
 
-                <img src="media/img/gallery-1.webp" alt="Album 1">
-                <img src="media/img/gallery-2.webp" alt="Album 2">
-                <img src="media/img/gallery-3.webp" alt="Album 3">
-                <img src="media/img/gallery-4.webp" alt="Album 4">
+                <img src="media/img/gallery-5.webp" alt="Album 5">
+                <img src="media/img/gallery-6.webp" alt="Album 6">
+                <img src="media/img/gallery-7.webp" alt="Album 7">
+                <img src="media/img/gallery-8.webp" alt="Album 8">
                 
             </div>
 
@@ -105,7 +135,7 @@
                 The space has been designed with a minimal, elegant and slightly nostalgic atmosphere, using dark backgrounds, soft botanical textures, blurred flowers and neutral tones. Each section of the museum invites the visitor to slow down, observe the details and experience Ariana's evolution through a more visual and sensory approach. Besides the exhibition rooms, the experience also includes exclusive visual pieces, photo opportunities and a small merchandise area connected to the Petal Experience concept. More than a traditional museum, it works as an immersive pop culture experience where music, memory, design and emotion come together in the same place.
             </p>
 
-            <a href="#" class="main-button">BUY TICKETS NOW!</a>
+            <a href="tickets.html" class="main-button-about">BUY TICKETS NOW!</a>
         </section>
         
     </main>
@@ -152,7 +182,6 @@
 
     </footer>
     
-    <script src="js/pablo.js"></script>
 </body>
 
 

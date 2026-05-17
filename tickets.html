@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETS</title>
+        
+    <link rel="stylesheet" href="css/pablo.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="tickets-body">
+    
+    <header>
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a href="contactme.html">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
+
+            <a href="tickets.html" class="btn-tickets">BUY TICKETS</a>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main class="tickets-page">
+
+        <section class="tickets-hero">
+            <img src="media/img/ticket ariana.webp" alt="Petal Experience ticket">
+        </section>
+
+
+        <section class="tickets-details">
+            <h1 class="tickets-title">ENTER YOUR DETAILS</h1>
+
+            <p class="tickets-subtitle">Your tickets will be sent to the email address provided below.</p>
+
+            <form class="tickets-form">
+                <input class="tickets-input" type="text" placeholder="Enter your full name..." required>
+
+                <input class="tickets-input" type="email" placeholder="Enter your email address..." required>
+
+
+                <div class="tickets-box">
+
+                    <div class="tickets-row">
+                        <p>Entrada adulto (+16)</p>
+                        <p>12$</p>
+                        <input class="tickets-quantity" type="number" min="0" max="99" value="0" data-price="12">
+                    </div>
+
+                    <div class="tickets-row">
+                        <p>Entrada estudiante</p>
+                        <p>7$</p>
+                        <input class="tickets-quantity" type="number" min="0" max="99" value="0" data-price="7">
+                    </div>
+
+                    <div class="tickets-row">
+                        <p>Entrada infantil (5-15)</p>
+                        <p>4$</p>
+                        <input class="tickets-quantity" type="number" min="0" max="99" value="0" data-price="4">
+                    </div>
+
+                    <div class="tickets-row">
+                        <p>Visita guiada</p>
+                        <p>20$</p>
+                        <input class="tickets-quantity" type="number" min="0" max="99" value="0" data-price="20">
+                    </div>
+
+                    <div class="tickets-row">
+                        <p>Audioguía</p>
+                        <p>15$</p>
+                        <input class="tickets-quantity" type="number" min="0" max="99" value="0" data-price="15">
+                    </div>
+
+                    <div class="tickets-total">
+                        <p>Total: <span id="tickets-total-price">0$</span></p>
+                        <button type="submit" class="tickets-continue">CONTINUE</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section class="tour-dates">
+            <h2 class="tour-title">ARIANA GRANDE TOUR DATES</h2>
+
+            <div class="tour-card">
+                <div class="tour-card-text">
+                    <p class="descr">
+                        Discover Ariana Grande's official tour dates and experience her music live on stage. Check the latest shows, venues and ticket availability through her official ticket platform.
+                    </p>
+                    <br>
+                    <p class="tour-location">
+                        London, UK · 23.08.26
+                    </p>
+                </div>
+
+                <a href="https://shop.arianagrande.com/pages/tour" class="tour-button" target="_blank">GET TICKETS</a>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-card-text">
+                    <p class="descr">
+                        From her most iconic songs to her newest releases, Ariana's live performances bring together vocals, visuals and emotional storytelling in a complete concert experience.
+                    </p>
+                    <br>
+                    <p class="tour-location">
+                        Brooklyn, NY · 19.07.26
+                    </p>
+                </div>
+
+                <a href="https://shop.arianagrande.com/pages/tour" class="tour-button" target="_blank">GET TICKETS</a>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-card-text">
+                    <p class="descr">
+                        Stay updated with upcoming dates, exclusive announcements and ticket releases directly from Ariana Grande's official channels and verified ticket partners.
+                    </p>
+                    <br>
+                    <p class="tour-location">
+                        Oakland, CA · 06.06.26
+                    </p>
+                </div>
+
+                <a href="https://shop.arianagrande.com/pages/tour" class="tour-button" target="_blank">GET TICKETS</a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+<footer class="site-footer-tickets">
+
+        <nav class="footer-socials">
+            <a href="https://www.tiktok.com/@arianagrande" class="footer-social-link-tickets" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.instagram.com/arianagrande/" class="footer-social-link-tickets" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ariansqrande" class="footer-social-link-tickets" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.facebook.com/arianagrande/?locale=es_ES" class="footer-social-link-tickets" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://open.spotify.com/intl-es/artist/66CXWjxzNUsdJxJ2JdwvnR" class="footer-social-link-tickets" aria-label="Spotify">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+        </nav>
+
+        <p class="footer-text">
+            Follow us in our social media!<br>
+            © 2026 Ariana Grande Petals Experience
+        </p>
+
+        <nav class="footer-legal-tickets">
+            <a href="https://shop.arianagrande.com/pages/help">Help &amp; Support</a>
+            <span>•</span>
+            <a href="https://shop.arianagrande.com/policies/terms-of-sale">Terms</a>
+            <span>•</span>
+            <a href="https://shop.arianagrande.com/policies/privacy-policy">Privacy</a>
+            <span>•</span>
+            <a href="#">Cookie Choices</a>
+        </nav>
+
+    </footer>
+
+    <script src="js/pablo.js"></script>
+
+    </body>
+</html>
