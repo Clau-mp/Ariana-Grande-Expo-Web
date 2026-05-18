@@ -24,11 +24,18 @@
     --fs-about-text-desk: 1.25rem;
 }
 
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 /* GENERAL */
 html,
@@ -46,6 +53,8 @@ body {
     color: var(--color-white);
     padding-top: 11.5rem;
 }
+
+
 
 
 /* HEADER */
@@ -178,6 +187,11 @@ header{
     display: none;
 }
 
+
+
+
+
+
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
     header{
@@ -188,6 +202,7 @@ header{
         justify-content: space-between;
         align-items: center;
    }
+
    .menu-desktop, .btn-tickets , .nav-desktop{
         display: none;
    }
@@ -197,59 +212,103 @@ header{
         cursor: pointer;
         z-index: 9999;
    }
+
    .ham > i {
-    color: var(--color-white);
-    font-size: 2.2rem;
+        color: var(--color-white);
+        font-size: 2.2rem;
    }
+
    .header-left{
         margin-left: 0;
         gap: 0;
    }
+
    .buscador > input {
-     width: 130px;
-     font-size: 0.85rem;
+        width: 130px;
+        font-size: 0.85rem;
    }
+
    .logo > img {
         height: 7rem;
         width: auto;
         display: block;
    }
-   .nav-mobile{
-     display: flex;
-     flex-direction: column;
-       align-items: center;
-     justify-content: center;
-     position: fixed;
-     top: 0;
-     left:-100%;
-     width: 100vw;
-        height: 100vh;
-        background-color: #1a1a1aad;
-        z-index: 9998;
-        transition: left 0.4s ease;
-    }
-   .menu-mobile{
+
+    .nav-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: rgba(26, 26, 26, 0.92);
+
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        z-index: 99999;
+    }
+
+    .nav-mobile.active {
+        transform: translateX(0);
+
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         gap: 2.5rem;
         padding: 0;
+        margin: 0;
+
         list-style: none;
     }
 
     .menu-mobile > li > a {
-        font-size: var(--fs-subtitle-desk);
         color: var(--color-white);
         font-family: var(--font-main);
-        text-transform: lowercase;
+        font-size: var(--fs-subtitle-desk);
         text-decoration: none;
-   }
+        text-transform: lowercase;
+    }
+
+    .ham {
+        display: block;
+        position: relative;
+        z-index: 100000;
+        cursor: pointer;
+    }
+
+    header {
+        z-index: 100000;
+    }
+
    .buscador > i {
     font-size: 1.5rem;
    }
-
-
 }
+
+
+
+
+
+
 
 
 /* ABOUT */
@@ -268,7 +327,6 @@ header{
     gap: 3rem;
 }
 
-
 .about-text {
     width: 60%;
 }
@@ -279,7 +337,6 @@ header{
     line-height: 1.25;
     margin-bottom: 1.5rem;
 }
-
 
 .about-polaroids {
     width: 28%;
@@ -364,6 +421,7 @@ header{
     height: 5rem;
 }
 
+
 @keyframes brands-loop {
     from {
         transform: translateX(0);
@@ -387,7 +445,6 @@ header{
     object-fit: cover;
 }
 
-
 .about-content {
     width: 95%;
     max-width: 1300px;
@@ -401,7 +458,6 @@ header{
     line-height: 1.25;
     margin-bottom: 2rem;
 }
-
 
 .about-gallery {
     width: 100vw;
@@ -444,13 +500,6 @@ header{
     pointer-events: none;
 }
 
-
-
-
-
-
-
-/* BUTTONS ABOUT */
 .main-button-about {
     display: block;
     width: fit-content;
@@ -470,21 +519,6 @@ header{
     background-color: var(--color-dark);
     transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -613,7 +647,7 @@ header{
     justify-content: center;
     align-items: center;
 
-    z-index: 99999;
+    z-index: 200000;
     padding: 3rem;
 }
 
@@ -668,7 +702,7 @@ header{
     font-size: 2rem;
 
     cursor: pointer;
-    z-index: 100000;
+    z-index: 200001;
 
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -686,11 +720,9 @@ body.modal-open {
     overflow: hidden;
 }
 
-
-
-
-
-
+body.modal-open header {
+    z-index: 1;
+}
 
 
 
@@ -727,7 +759,9 @@ body.modal-open {
 }
 
 .tickets-details {
-    width: 100%;
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 .tickets-title {
@@ -761,7 +795,7 @@ body.modal-open {
 
 .tickets-box {
     margin-top: 3rem;
-    padding: 3rem;
+    padding: 2.4rem;
     background-color: var(--color-grey);
     border-radius: 1.5rem;
 }
@@ -770,9 +804,9 @@ body.modal-open {
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: var(--fs-subtitle-desk);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .tickets-row p {
@@ -780,12 +814,12 @@ body.modal-open {
 }
 
 .tickets-quantity {
-    width: 4rem;
+    width: 3.2rem;
     background-color: transparent;
     color: var(--color-white);
     border: none;
     font-family: var(--font-main);
-    font-size: var(--fs-subtitle-desk);
+    font-size: 1.75rem;
     text-align: center;
 }
 
@@ -797,23 +831,23 @@ body.modal-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .tickets-total p {
-    font-size: var(--fs-subtitle-desk);
+    font-size: 1.75rem;
     font-weight: var(--fw-bold);
 }
 
 .tickets-continue {
-    padding: 1rem 3.5rem;
+    padding: 0.8rem 3rem;
     border: none;
     border-radius: 999px;
 
     background-color: var(--color-white);
     color: var(--color-dark);
     font-family: var(--font-main);
-    font-size: var(--fs-button-desk);
+    font-size: 1.25rem;
     font-style: italic;
     font-weight: var(--fw-bold);
 
@@ -858,7 +892,14 @@ body.modal-open {
     width: 70%;
 }
 
-.tour-card-text > descr {
+.tour-card-text > .descr {
+    font-size: var(--fs-about-text-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.descr {
     font-size: var(--fs-about-text-desk);
     font-weight: var(--fw-regular);
     line-height: 1.2;
@@ -890,9 +931,6 @@ body.modal-open {
 
     transition: transform 0.3s ease;
 }
-
-
-
 
 
 
@@ -943,6 +981,248 @@ body.modal-open {
 .footer-legal-tickets span {
     color: var(--color-white);
 }
+
+
+
+/* MEDIA QUERY TABLET TICKETS */
+@media (max-width: 1024px) {
+
+    .tickets-body {
+        padding-top: 7rem;
+    }
+
+    .tickets-page {
+        width: 95%;
+        max-width: 100%;
+        padding: 0 0 6rem;
+    }
+
+    .tickets-hero {
+        margin-bottom: 6rem;
+    }
+
+    .tickets-hero img {
+        width: 90%;
+        max-width: 760px;
+    }
+
+    .tickets-details {
+        width: 92%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .tickets-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tickets-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tickets-input {
+        padding: 1.2rem 1.4rem;
+        margin-bottom: 1.4rem;
+        font-size: 1rem;
+    }
+
+    .tickets-box {
+        margin-top: 2.5rem;
+        padding: 2rem;
+        border-radius: 1.4rem;
+    }
+
+    .tickets-row {
+        grid-template-columns: 1fr auto auto;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+        font-size: 1.45rem;
+    }
+
+    .tickets-quantity {
+        width: 3rem;
+        font-size: 1.45rem;
+    }
+
+    .tickets-total {
+        margin-top: 3rem;
+    }
+
+    .tickets-total p {
+        font-size: 1.7rem;
+    }
+
+    .tickets-continue {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.15rem;
+    }
+
+    .tour-dates {
+        width: 92%;
+        max-width: 900px;
+        margin: 6rem auto 0;
+    }
+
+    .tour-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tour-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 1.3rem;
+        gap: 2rem;
+    }
+
+    .tour-card-text {
+        width: 68%;
+    }
+
+    .tour-card-text > .descr {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    }
+
+    .tour-button {
+        width: 160px;
+        height: 58px;
+        font-size: 1rem;
+    }
+
+}
+
+
+/* MEDIA QUERY MOBILE TICKETS */
+@media (max-width: 480px) {
+
+    .tickets-body {
+        padding-top: 6.5rem;
+    }
+
+    .tickets-page {
+        width: 92%;
+        padding: 0 0 5rem;
+    }
+
+    .tickets-hero {
+        margin-bottom: 4rem;
+    }
+
+    .tickets-hero img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tickets-details {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tickets-title {
+        font-size: 1.65rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .tickets-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin-bottom: 1.2rem;
+    }
+
+    .tickets-input {
+        padding: 1rem 1.2rem;
+        margin-bottom: 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 0.35rem;
+    }
+
+    .tickets-box {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: 1.2rem;
+    }
+
+    .tickets-row {
+        grid-template-columns: 1fr auto auto;
+        gap: 0.7rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.05rem;
+    }
+
+    .tickets-quantity {
+        width: 2.2rem;
+        font-size: 1.05rem;
+    }
+
+    .tickets-total {
+        margin-top: 2.5rem;
+        gap: 1rem;
+    }
+
+    .tickets-total p {
+        font-size: 1.35rem;
+    }
+
+    .tickets-continue {
+        padding: 0.7rem 1.7rem;
+        font-size: 0.95rem;
+    }
+
+    .tour-dates {
+        width: 100%;
+        max-width: 100%;
+        margin: 5rem auto 0;
+    }
+
+    .tour-title {
+        font-size: 1.65rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .tour-card {
+    padding: 1.2rem 1.1rem;
+    margin-bottom: 1.8rem;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    column-gap: 1rem;
+    row-gap: 1.2rem;
+}
+
+.tour-card-text {
+    width: 100%;
+    grid-column: 1 / 3;
+}
+
+.tour-card-text > .descr {
+    font-size: 0.78rem;
+    line-height: 1.18;
+    margin-bottom: 1rem;
+}
+
+.tour-location {
+    font-size: 0.82rem;
+    font-weight: var(--fw-bold);
+    grid-column: 1 / 2;
+}
+
+.tour-button {
+    grid-column: 2 / 3;
+    justify-self: end;
+
+    width: 135px;
+    height: 48px;
+
+    font-size: 0.8rem;
+}
+
+}
+
 
 
 /* FOOTER TABLET TICKETS */
@@ -1049,10 +1329,7 @@ body.modal-open {
 }
 
 
-/* MEDIA QUERY TABLET TICKETS */
 
-
-/* MEDIA QUERY MOBILE TICKETS */
 
 
 
@@ -1223,9 +1500,365 @@ body.modal-open {
 
 
 /* MEDIA QUERY TABLET ABOUT */
+@media (max-width: 1024px) {
 
+    .about-body {
+        padding-top: 7rem;
+        overflow-x: hidden;
+    }
+
+    .about-page {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .about-intro {
+        width: 95%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem 0 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 1.4rem;
+    }
+
+    .about-polaroids {
+        width: 100%;
+        min-height: auto;
+        margin-right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        position: static;
+        padding: 1rem 0 2rem;
+    }
+
+    .about-polaroids img {
+        position: static;
+        width: 22%;
+        max-width: 170px;
+        display: block;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .about-polaroids img:first-child {
+        transform: rotate(-7deg);
+    }
+
+    .about-polaroids img:nth-child(2) {
+        transform: rotate(12deg);
+    }
+
+    .about-polaroids img:last-child {
+        transform: rotate(-8deg);
+    }
+
+    .about-brands {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        transform: none;
+
+        height: 3.5rem;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+
+        background-color: var(--color-beige);
+        overflow: hidden;
+    }
+
+    .brands-track {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .brand-mac {
+        height: 2rem;
+    }
+
+    .brand-rem {
+        height: 2.6rem;
+    }
+
+    .brand-givenchy {
+        height: 2.8rem;
+    }
+
+    .brand-swarovski {
+        height: 4rem;
+    }
+
+    .brand-reebok {
+        height: 2.2rem;
+    }
+
+    .brand-starbucks {
+        height: 2.6rem;
+    }
+
+    .about-video-section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        transform: none;
+        overflow: hidden;
+    }
+
+    .about-video {
+        width: 100%;
+        height: 480px;
+        display: block;
+        object-fit: cover;
+    }
+
+    .about-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem 0 7rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 1.6rem;
+    }
+
+    .about-gallery {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
+
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        gap: 2rem;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .about-gallery img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .main-button-about {
+        margin-top: 3.5rem;
+        padding: 0.85rem 2.4rem;
+        font-size: 1.15rem;
+    }
+
+}
 
 /* MEDIA QUERY MOBILE ABOUT */
+@media (max-width: 480px) {
+
+    .about-body {
+        padding-top: 6.5rem;
+        overflow-x: hidden;
+    }
+
+    .about-page {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .about-intro {
+        width: 92%;
+        margin: 0 auto;
+        padding: 1.5rem 0 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text p {
+        font-size: 0.82rem;
+        line-height: 1.25;
+        margin-bottom: 1.2rem;
+    }
+
+    .about-polaroids {
+        width: 100%;
+        min-height: auto;
+        margin-right: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 3.5rem;
+        position: static;
+        padding: 1rem 0 2rem;
+    }
+
+    .about-polaroids img {
+        position: static;
+        width: 58%;
+        max-width: 210px;
+        display: block;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .about-polaroids img:first-child {
+        transform: rotate(-8deg);
+    }
+
+    .about-polaroids img:nth-child(2) {
+        transform: rotate(10deg);
+    }
+
+    .about-polaroids img:last-child {
+        transform: rotate(-7deg);
+    }
+
+    .about-brands {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        transform: none;
+
+        height: 3.2rem;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+
+        background-color: var(--color-beige);
+        overflow: hidden;
+    }
+
+    .brands-track {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 2.4rem;
+    }
+
+    .brand-mac {
+        height: 1.8rem;
+    }
+
+    .brand-rem {
+        height: 2.4rem;
+    }
+
+    .brand-givenchy {
+        height: 2.5rem;
+    }
+
+    .brand-swarovski {
+        height: 3.6rem;
+    }
+
+    .brand-reebok {
+        height: 2rem;
+    }
+
+    .brand-starbucks {
+        height: 2.4rem;
+    }
+
+    .about-video-section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        transform: none;
+        overflow: hidden;
+    }
+
+    .about-video {
+        width: 100%;
+        height: 300px;
+        display: block;
+        object-fit: cover;
+    }
+
+    .about-content {
+        width: 92%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.8rem 0 5rem;
+    }
+
+    .about-content p {
+        font-size: 0.82rem;
+        line-height: 1.25;
+        margin-bottom: 1.4rem;
+    }
+
+    .about-gallery {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        display: flex;
+        gap: 1.5rem;
+
+        padding: 1.2rem 1.2rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        cursor: grab;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .about-gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-gallery img {
+        flex: 0 0 12rem;
+        width: 12rem;
+        height: 12rem;
+
+        object-fit: contain;
+        background-color: var(--color-brown);
+
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        pointer-events: none;
+    }
+
+    .main-button-about {
+        margin-top: 3rem;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
 
 
 
@@ -1428,3 +2061,82 @@ body.modal-open {
 
 
 /* MEDIA QUERY MOBILE GALLERY */
+@media (max-width: 480px) {
+
+    .gallery1-body {
+        padding-top: 6.5rem;
+    }
+
+    .gallery-page {
+        width: 92%;
+        max-width: 100%;
+        padding: 1.5rem 0 4.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: 17rem;
+        object-fit: cover;
+    }
+
+    .img-large-horizontal,
+    .img-medium,
+    .img-small,
+    .img-studio-small,
+    .img-wide,
+    .img-extra-wide,
+    .img-studio-wide,
+    .img-square {
+        grid-column: span 1;
+        height: 17rem;
+    }
+
+    .gallery-button {
+        margin-top: 3.5rem;
+        padding: 0.75rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    /* MODAL MOBILE */
+    .gallery-modal {
+        padding: 1.5rem;
+        align-items: center;
+    }
+
+    .gallery-modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 90vh;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-modal-content img {
+        width: 100%;
+        max-height: 50vh;
+        object-fit: contain;
+    }
+
+    .gallery-modal-text h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .gallery-modal-text p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .gallery-modal-close {
+        top: 1rem;
+        right: 1.2rem;
+        font-size: 1.5rem;
+    }
+}
