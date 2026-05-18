@@ -3,9 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT ME</title>
+    <title>CONTACT</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/claudia.css">
+    <script src="js/claudia.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
 </head>
-<body>
+<body class="contact">
+     <header>
+         <div class="header-left"> 
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                   <input type="text" placeholder="search our experience">
+                </div>
+                <nav class="nav-desktop">
+                        <ul class="menu-desktop">
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a href="contactme.html">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="media/img/Logo_expo.webp">
+            </a>
+
+            <a href="tickets.html" class="btn-tickets">BUY TICKETS</a>
+            <div class="ham">
+                <i class="fa-solid fa-bars" id="bar-icon" onclick="openMenu()"></i>
+                <i class="fa-solid fa-x" id="x-icon" style="display: none;" onclick="closeMenu()"></i>
+            </div>
+            <nav id="menu" class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                </ul>
+            </nav>
+    </header>
+    <div class="contact-container">
+        <div class="contact-top-section">
+            <div class="google-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97206.61868957475!2d-3.7741395417969046!3d40.415344899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229aa810859db%3A0x84f70547186202eb!2sUMusic%20Hotel%20Madrid!5e0!3m2!1ses!2ses!4v1779069601980!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-info">
+                <h2>PRACTICAL INFORMATION</h2>
+                <p>C. de la Paz, 11, Centro, 28012 Madrid</p>
+                <p>petalexperience@gmail.com</p>
+                <p>+34 911 23 10 99</p>
+
+                <h3>PUBLIC TRANSPORT</h3>
+                <ul>
+                    <li><strong>Metro:</strong>Sol (L1, L2, L3), Tirso de Molina (L1)</li>
+                    <li><strong>Cercanías:</strong>Sol (C3, C4)</li>
+                    <li><strong>Bus:</strong>6, 26, 32, 50, 51, 65, 150, M1</li>
+                    <li><strong>Bike:</strong>Bicimad Stations: 1A / 1B / 31</li>
+                    
+                </ul>
+                <h3>OPENING HOURS</h3>
+                <p>Monday to Sunday from 4:00 PM to 10:30 PM</p>
+                <div class="social-icons-contact">
+                    <a href="https://www.tiktok.com/@arianagrande" class="contact-social-link" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/arianagrande/" class="contact-social-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/ariansqrande" class="contact-social-link" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/arianagrande/?locale=es_ES" class="contact-social-link" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://open.spotify.com/intl-es/artist/66CXWjxzNUsdJxJ2JdwvnR" class="contact-social-link" aria-label="Spotify">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+            </div>
+            </div>
+    
+        </div>
+        <div class="contact-questionary">
+            <h2>CONTACT US</h2>
+            <p class="subtitle-questions">Any doubts? Contact with the support team!</p>
+
+            <form>
+                <input type="text" placeholder="First Name" required class="questionary-type">
+                <input type="text" placeholder="Last Name" required class="questionary-type">
+                <input type="email" placeholder="Email Address" required class="questionary-type">
+                <input type="textarea" placeholder="Type a message..." rows="6" required class="questionary-type">
+
+                <div class="contact-questionary-checkbox">
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>Subscribe to our Newsletter for the latest updates.</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>I agree to the terms and privacy policy.</span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">SEND</button>
+            </form>
+        </div>
+    </div>
+ <footer class="site-footer-contact">
+
+        <nav class="footer-socials">
+            <a href="https://www.tiktok.com/@arianagrande" class="footer-social-link" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.instagram.com/arianagrande/" class="footer-social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ariansqrande" class="footer-social-link" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.facebook.com/arianagrande/?locale=es_ES" class="footer-social-link" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://open.spotify.com/intl-es/artist/66CXWjxzNUsdJxJ2JdwvnR" class="footer-social-link" aria-label="Spotify">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+        </nav>
+
+        <p class="footer-text">
+            Follow us in our social media!<br>
+            © 2026 Ariana Grande Petals Experience
+        </p>
+
+        <nav class="footer-legal">
+            <a href="https://shop.arianagrande.com/pages/help">Help &amp; Support</a>
+            <span>•</span>
+            <a href="https://shop.arianagrande.com/policies/terms-of-sale">Terms</a>
+            <span>•</span>
+            <a href="https://shop.arianagrande.com/policies/privacy-policy">Privacy</a>
+            <span>•</span>
+            <a href="#">Cookie Choices</a>
+        </nav>
+
+    </footer>
     
 </body>
 </html>
