@@ -219,6 +219,9 @@ nav > ul {
     opacity: 0;
     transition:  bottom 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.8s ease-out;
     z-index: 10000;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 .intro-flowers-left{
     left: 0;
@@ -442,24 +445,93 @@ nav > ul {
 
 /* shop home */
 
-#merch.section{
+#merch-section{
     position: relative;
     width: 100%;
-    padding: 6.30rem 0 8.70rem 0;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
     background-image: url(../media/img/back-img-shop.webp);
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% auto;
     z-index: 5;
+    background-color: var(--color-dark);
 }
 .merch-carrusel{
-    background-color: var(--color-grey);
+    background-color: var(--color-dark);
     display: flex;
     gap: 3.6rem;
     padding: 3.75rem 5rem;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    will-change: scroll-position;
+}
+.merch-carrusel::-webkit-scrollbar{
+    display: none;
+}
+.merch-title-container{
+    margin-bottom: 2.5rem;
+    padding-left: 6%;
+}
+.merch-title{
+    font-family: var(--font-main);
+    font-size: var(--fs-button-desk);
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--color-white);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-image:url(../media/img/tickets-texture.webp) ;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 70px;
+    border: none;
+    margin-right: 2.188rem; 
+    display: flex;
+}
+.merch-item{
+    flex: 0 0 17.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.merch-imgs{
+    width: 100%;
+    height: 23.4rem;
+    position: relative;
+    margin-bottom: 1.4rem;
+    cursor: pointer;
+}
+.merch-imgs > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease-in-out;
+}
+.img-back{
+    opacity: 0;
+}
+.merch-item:hover .img-front{
+    opacity: 0;
+}
+.merch-item:hover .img-back{
+    opacity: 1;
+}
+.product-name, .price{
+    font-family: var(--font-main);
+    color: var(--color-white);
+    font-size: var(--fs-small-desk);
+    margin: 0 0 0.5rem 0;
+    font-weight: var(--fw-regular);
 }
 /* CONTACT */
 

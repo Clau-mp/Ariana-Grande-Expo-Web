@@ -28,6 +28,8 @@ window.onload = function(){
 };
 
 
+
+
 // BARRA DE NAVEGACIÓN
 function openMenu() {
 
@@ -74,6 +76,39 @@ window.addEventListener("load", function() {
         moverCarrusel();
     },2500);
 
+});
+
+// MERCH
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector(".merch-carrusel");
+
+    if (!gallery) return;
+
+    let isDragging = false;
+
+    gallery.addEventListener("pointerdown", function (e) {
+        isDragging = true;
+        gallery.setPointerCapture(e.pointerId);
+        gallery.classList.add("dragging");
+    });
+
+    gallery.addEventListener("pointermove", function (e) {
+        if (!isDragging) return;
+
+        e.preventDefault();
+        gallery.scrollLeft -= e.movementX;
+    });
+
+    gallery.addEventListener("pointerup", function (e) {
+        isDragging = false;
+        gallery.releasePointerCapture(e.pointerId);
+        gallery.classList.remove("dragging");
+    });
+
+    gallery.addEventListener("pointercancel", function () {
+        isDragging = false;
+        gallery.classList.remove("dragging");
+    });
 });
 
 
