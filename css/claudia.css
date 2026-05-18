@@ -360,6 +360,40 @@ nav > ul {
     display: block;
 }
 
+/* CONTACT */
+
+.contact{
+    background-color: var(--color-dark);
+    padding-top: 11.5rem;
+}
+.contact-container{
+    width: 95%;
+    max-width: 1500px;
+    margin: 2rem auto;
+    font-family: var(--font-main);
+    box-sizing: border-box;
+}
+.contact-top-section{
+    display: flex;
+    gap: 3.125rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+.google-maps{
+    flex: 1;
+    min-width: 20rem;
+    height: 25rem;
+    aspect-ratio: 1 / 1 ;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+.google-maps > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
     header{
