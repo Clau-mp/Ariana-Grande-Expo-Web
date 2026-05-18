@@ -80,7 +80,15 @@ if (galleryImages.length > 0 && galleryModal && galleryModalImg && galleryModalC
 
 
 
+// OPEN HAMB
+var ham = document.querySelector(".ham");
+var navMobile = document.querySelector(".nav-mobile");
 
+if (ham && navMobile) {
+    ham.addEventListener("click", function () {
+        navMobile.classList.toggle("active");
+    });
+}
 
 
 

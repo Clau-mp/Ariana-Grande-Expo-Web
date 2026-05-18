@@ -11,3 +11,13 @@ function closeMenu() {
      document.getElementById("bar-icon").style.display = "block";
     document.getElementById("x-icon").style.display = "none";
 }
+
+// OPEN HAMB
+var ham = document.querySelector(".ham");
+var navMobile = document.querySelector(".nav-mobile");
+
+if (ham && navMobile) {
+    ham.addEventListener("click", function () {
+        navMobile.classList.toggle("active");
+    });
+}
