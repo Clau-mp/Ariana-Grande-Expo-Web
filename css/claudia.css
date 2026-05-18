@@ -440,6 +440,27 @@ nav > ul {
     display: block;
 }
 
+/* shop home */
+
+#merch.section{
+    position: relative;
+    width: 100%;
+    padding: 6.30rem 0 8.70rem 0;
+    background-image: url(../media/img/back-img-shop.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 5;
+}
+.merch-carrusel{
+    background-color: var(--color-grey);
+    display: flex;
+    gap: 3.6rem;
+    padding: 3.75rem 5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
 /* CONTACT */
 
 .contact{
