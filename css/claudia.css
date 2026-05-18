@@ -733,4 +733,43 @@ nav > ul {
     .ham > i {
         font-size: var(--fs-subtitle-desk);
     }
+
+    /* CONTACT */
+    
+    .contact{
+        padding-top:3rem;
+    }
+    .contact-container{
+        width: 90%;
+    }
+    .contact-top-section, .contact-questionary{
+        margin: 0;
+    }
+    .contact-top-section{
+        align-items: center;
+    }
+    .google-maps{
+        height: 20rem;
+    }
+    .contact-info > ul > li{
+        margin-left:0;
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+    .social-icons-contact{
+        justify-content: center;
+        margin: 1.3rem auto 0;
+    }
+    .contact-questionary > h2, .subtitle-questions{
+        text-align: center;
+    }
+    .contact-questionary-checkbox > label{
+        font-size: 0.68rem;
+        align-items: flex-start;
+    }
+    .submit-btn{
+        width: 100%;
+        max-width: 19rem;
+    }
+
 }
