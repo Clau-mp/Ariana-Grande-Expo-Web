@@ -727,7 +727,9 @@ body.modal-open {
 }
 
 .tickets-details {
-    width: 100%;
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 .tickets-title {
@@ -761,7 +763,7 @@ body.modal-open {
 
 .tickets-box {
     margin-top: 3rem;
-    padding: 3rem;
+    padding: 2.4rem;
     background-color: var(--color-grey);
     border-radius: 1.5rem;
 }
@@ -770,9 +772,9 @@ body.modal-open {
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: var(--fs-subtitle-desk);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .tickets-row p {
@@ -780,12 +782,12 @@ body.modal-open {
 }
 
 .tickets-quantity {
-    width: 4rem;
+    width: 3.2rem;
     background-color: transparent;
     color: var(--color-white);
     border: none;
     font-family: var(--font-main);
-    font-size: var(--fs-subtitle-desk);
+    font-size: 1.75rem;
     text-align: center;
 }
 
@@ -797,23 +799,23 @@ body.modal-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .tickets-total p {
-    font-size: var(--fs-subtitle-desk);
+    font-size: 1.75rem;
     font-weight: var(--fw-bold);
 }
 
 .tickets-continue {
-    padding: 1rem 3.5rem;
+    padding: 0.8rem 3rem;
     border: none;
     border-radius: 999px;
 
     background-color: var(--color-white);
     color: var(--color-dark);
     font-family: var(--font-main);
-    font-size: var(--fs-button-desk);
+    font-size: 1.25rem;
     font-style: italic;
     font-weight: var(--fw-bold);
 
@@ -895,10 +897,6 @@ body.modal-open {
 
 
 
-
-
-
-
 /* FOOTER DESKTOP TICKETS */
 .site-footer-tickets {
     width: 100%;
@@ -943,6 +941,16 @@ body.modal-open {
 .footer-legal-tickets span {
     color: var(--color-white);
 }
+
+
+
+/* MEDIA QUERY TABLET TICKETS */
+
+
+
+/* MEDIA QUERY MOBILE TICKETS */
+
+
 
 
 /* FOOTER TABLET TICKETS */
@@ -1049,10 +1057,7 @@ body.modal-open {
 }
 
 
-/* MEDIA QUERY TABLET TICKETS */
 
-
-/* MEDIA QUERY MOBILE TICKETS */
 
 
 
