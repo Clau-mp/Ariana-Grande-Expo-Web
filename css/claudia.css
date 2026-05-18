@@ -37,23 +37,6 @@ html{
     padding-top: 11.5rem;
 }
 
-.portada-publi-btn{
-    background-color: var(--color-brown);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 3.125rem;
-    padding: 0.75rem 1.75rem;
-    font-size: var(--fs-button-desk);
-    font-weight: var(--fw-bold);
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-.portada-publi-btn:hover{
-    background-color: var(--color-green);
-    color: var(--color-brown);
-}
-
  /* BARRA DE NAVEGACIÓN */
  
 header{
@@ -238,6 +221,24 @@ nav > ul {
     color: var(--color-black);
     font-style: italic;
 }
+.portada-publi-btn{
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 3.125rem;
+    padding: 0.75rem 1.75rem;
+    font-size: var(--fs-button-desk);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease; transform: 0.2s ease;
+}
+.portada-publi-btn:hover{
+    background-color: var(--color-green);
+    color: var(--color-brown);
+    transform: scale(1.13)
+}
+
 /* Home petal experience about */
 #petal-experience-about{
     width: 95%;
@@ -300,13 +301,14 @@ nav > ul {
     font-size: var(--fs-button-desk);
     font-weight:var(--fw-medium) ;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; transform: 0.2s ease;
     margin: 2rem auto 0 auto;
 
 }
 .petal-experience-about-bt:hover{
     background-color: var(--color-white);
     color: var(--color-green);
+    transform: scale(1.13);
 }
 
 /* carrusel home */
@@ -379,12 +381,12 @@ nav > ul {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 8rem;
+    margin: 0 4rem;
 
 }
 .google-maps{
    width: 100%;
-    max-width: 38.25rem;
+    max-width: 41.25rem;
     height: 31.25rem;
     flex-shrink: 0 ;
     border-radius: 1.25rem;
@@ -436,7 +438,7 @@ nav > ul {
 .contact-info > ul > li >strong{
     margin-right: 0.3125rem;
 }
-.social-icons-about{
+.social-icons-contact{
     display: flex;
     gap: 1.4rem;
     margin-top: 1.875rem;
@@ -454,8 +456,155 @@ nav > ul {
     transform: scale(1.15);
     color: var(--color-green);
 }
+.contact-questionary{
+    margin:0 4rem;
+}
+.contact-questionary > h2{
+    color: var(--color-beige);
+    font-family: var(--font-main);
+    font-weight: normal;
+    font-size: var(--fs-subtitle-desk);
+    margin-bottom: 0.4rem;
+    margin-top: 4rem;
+}
+.contact-questionary > form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+.subtitle-questions{
+    font-family: var(--font-main);
+    font-size: var(--fs-text-desk);
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.04rem;
+}
+ 
+.questionary-type{
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    background-color: var(--color-cream);
+    border: none;
+    border-radius: 0.4rem;
+    font-family: var(--font-main);
+    font-size: var(--fs-small-desk);
+    color: #000000;
+    box-sizing: border-box;
+}
+.questionary-type > textarea{
+    resize: vertical;
+    min-height: 10rem;
+}
+.contact-questionary-checkbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 0.4rem;
+}
+.contact-questionary-checkbox > label{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: var(--fs-small-desk);
+    font-style: italic;
+    color: var(--color-white);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
 
+}
+.contact-questionary-checkbox > label> input{
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
 
+.submit-btn{
+    background-color: var(--color-beige);
+    color: var(--color-white);
+    font-family: var(--font-main);
+    font-size: var(--fs-button-desk);
+    font-weight: var(--fw-bold);
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem 0;
+    width: 18rem;
+    cursor: pointer;
+    margin-top: 1,6rem;
+    align-self: center;
+    transition: all 0.3s ease; transform: 0.2s ease;
+    margin-bottom: 8rem;
+}
+.submit-btn:hover{
+    transform: scale(1.02);
+    background-color: var(--color-white);
+    color: var(--color-brown);
+}
+
+/* FOOTERS */
+
+/* footer contact */
+
+.site-footer-contact {
+    width: 100%;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+.footer-social-link {
+    color: var(--color-white);
+    font-size: var(--fs-button-desk);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.15);
+    color: var(--color-dark);
+}
+
+.footer-text {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+}
+
+.footer-legal {
+    font-size: var(--fs-small-desk);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-legal a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-dark);
+}
+
+.footer-legal span {
+    color: var(--color-white);
+}
 
 @media (max-width: 1024px) {
  /* BARRA DE NAVEGACIÓN */
