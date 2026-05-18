@@ -16,6 +16,9 @@ function carga () {
     } else{
         setTimeout(() => {
             document.getElementById('pantalla-de-carga').style.top = '-100%';
+            document.getElementById('pantalla-de-carga').style.opacity = '0';
+            document.getElementById('loading-flowers-left').style.opacity = '0';
+            document.getElementById('loading-flowers-right').style.opacity = '0';
         },1000);
     }
 }
