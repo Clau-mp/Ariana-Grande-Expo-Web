@@ -519,6 +519,20 @@ header{
     object-fit: cover;
 }
 
+.gallery-grid:hover .gallery-img {
+    opacity: 0.35;
+}
+
+.gallery-grid .gallery-img:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.gallery-img {
+    cursor: pointer;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
 .img-large-horizontal {
     grid-column: span 2;
     height: 420px;
@@ -585,9 +599,92 @@ header{
     transform: scale(1.05);
 }
 
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    width: 100vw;
+    height: 100vh;
 
+    background-color: rgba(0, 0, 0, 0.88);
 
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+    padding: 3rem;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-modal-content {
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 85vh;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.gallery-modal-content img {
+    width: 100%;
+    max-height: 80vh;
+    display: block;
+    object-fit: contain;
+}
+
+.gallery-modal-text {
+    color: var(--color-white);
+}
+
+.gallery-modal-text h2 {
+    font-size: var(--fs-subtitle-desk);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.gallery-modal-text p {
+    font-size: var(--fs-about-text-desk);
+    font-weight: var(--fw-regular);
+    line-height: 1.35;
+}
+
+.gallery-modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+
+    background: none;
+    border: none;
+
+    color: var(--color-white);
+    font-size: 2rem;
+
+    cursor: pointer;
+    z-index: 100000;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-modal-close:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.gallery-modal-close i {
+    pointer-events: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
 
 
 

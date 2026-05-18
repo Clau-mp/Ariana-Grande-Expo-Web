@@ -1,4 +1,4 @@
-// ABOUT
+// ABOUT SCROLL HORIZONTAL
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector(".about-gallery");
 
@@ -33,7 +33,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// GALLERY
+// GALLERY - VENTANA MODAL
+var galleryImages = document.querySelectorAll(".gallery-img");
+var galleryModal = document.getElementById("gallery-modal");
+var galleryModalImg = document.getElementById("gallery-modal-img");
+var galleryModalClose = document.getElementById("gallery-modal-close");
+var galleryModalTitle = document.getElementById("gallery-modal-title");
+var galleryModalDescription = document.getElementById("gallery-modal-description");
+
+galleryImages.forEach(function (image) {
+    image.addEventListener("click", function () {
+        galleryModal.classList.add("active");
+
+        galleryModalImg.src = image.src;
+        galleryModalImg.alt = image.alt;
+
+        galleryModalTitle.innerHTML = image.getAttribute("data-title");
+        galleryModalDescription.innerHTML = image.getAttribute("data-description");
+
+        document.body.classList.add("modal-open");
+    });
+});
+
+galleryModalClose.addEventListener("click", function () {
+    galleryModal.classList.remove("active");
+    galleryModalImg.src = "";
+    document.body.classList.remove("modal-open");
+});
+
+galleryModal.addEventListener("click", function (event) {
+    if (event.target === galleryModal) {
+        galleryModal.classList.remove("active");
+        galleryModalImg.src = "";
+        document.body.classList.remove("modal-open");
+    }
+});
 
 
 
@@ -43,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// TICKETS
+// TICKETS CALC
 const ticketInputs = document.querySelectorAll(".tickets-quantity");
 const ticketTotal = document.getElementById("tickets-total-price");
 
