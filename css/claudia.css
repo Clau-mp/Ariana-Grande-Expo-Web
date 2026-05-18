@@ -578,7 +578,7 @@ nav > ul {
     margin: 0 0 3rem 0;
     font-weight: var(--fw-regular);
 }
-.opportunity_btn{
+.opportunity_btn > a{
     font-family: var(--font-main);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -591,7 +591,7 @@ nav > ul {
     display: inline-block;
     transition: all 0.3s ease; transform: 0.2s ease; ;
 }
-.opportunity_btn:hover{
+.opportunity_btn > a:hover{
     background-color: var(--color-white);
     color: var(--color-green);
     transform: scale(1.13); 
@@ -1050,7 +1050,7 @@ nav > ul {
         padding: 0 5%;
         margin-bottom: 2rem;
     }
-    .opportunity_btn{
+    .opportunity_btn > a {
         font-size: calc(var(--fs-button-desk) * 0.9);
         padding: 1rem 2.8rem;
     }
