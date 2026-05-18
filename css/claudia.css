@@ -538,6 +538,64 @@ nav > ul {
     margin: 0 0 0.5rem 0;
     font-weight: var(--fw-regular);
 }
+
+/* opportunity section */
+
+#opportunity-section{
+    width: 100%;
+    padding: 6rem 0 8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opportunity-container{
+    width: 90%;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.opportunity-title{
+    font-family: var(--font-main);
+    color: var(--color-green);
+    font-size: 7rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.opportunity-text{
+    font-family: var(--font-main);
+    color: var(--color-white);
+    font-size: var(--fs-subtitle-desk);
+    margin: 0 0 3rem 0;
+    font-weight: var(--fw-regular);
+}
+.opportunity_btn{
+    font-family: var(--font-main);
+    color: var(--color-white);
+    background-color: var(--color-green);
+    font-size: var(--fs-button-desk);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.1rem 3.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease; transform: 0.2s ease; ;
+}
+.opportunity_btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-green);
+    transform: scale(1.13); 
+}
 /* CONTACT */
 
 .contact{
@@ -721,66 +779,6 @@ nav > ul {
 
 /* FOOTERS */
 
-/* footer contact */
-
-.site-footer-contact {
-    width: 100%;
-    padding: 5rem 2rem 3rem;
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    text-align: center;
-}
-
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.4rem;
-    margin-bottom: 1.4rem;
-}
-
-.footer-social-link {
-    color: var(--color-white);
-    font-size: var(--fs-button-desk);
-    text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.footer-social-link:hover {
-    transform: scale(1.15);
-    color: var(--color-dark);
-}
-
-.footer-text {
-    font-size: var(--fs-small-desk);
-    font-weight: var(--fw-regular);
-    line-height: 1.3;
-    margin-bottom: 1.3rem;
-}
-
-.footer-legal {
-    font-size: var(--fs-small-desk);
-    font-weight: var(--fw-regular);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.45rem;
-}
-
-.footer-legal a {
-    color: var(--color-white);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.3s ease;
-}
-
-.footer-legal a:hover {
-    color: var(--color-dark);
-}
-
-.footer-legal span {
-    color: var(--color-white);
-}
 
 @media (max-width: 1024px) {
 
@@ -900,6 +898,20 @@ nav > ul {
     display: flex;
     justify-content: flex-start;
     margin: 0 0 1rem 0;
+   }
+
+   /* oportunity section */
+
+   #oportunity-section{
+    padding: 5rem 0 6rem 0;
+   }
+   .opportunity-title{
+    font-size: 5.6rem;
+    margin-bottom: 1.5rem;
+   }
+   .opportunity-text{
+    font-size: calc(var(--fs-subtitle-desk)) * 0.85;
+    margin-bottom: 2.5rem;
    }
    /*  CONTACT */
 
@@ -1023,7 +1035,25 @@ nav > ul {
         font-size: 0.95rem;
     }
     
+    /* opportunity section */
 
+    #oppotunity-section{
+        padding: 4rem 0 5rem 0;
+    }
+    .opportunity-title{
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.2;
+    }
+    .opportunity-text{
+        font-size: calc(var(--fs-subtitle-desk) * 0.7);
+        padding: 0 5%;
+        margin-bottom: 2rem;
+    }
+    .opportunity_btn{
+        font-size: calc(var(--fs-button-desk) * 0.9);
+        padding: 1rem 2.8rem;
+    }
     /* CONTACT */
     
     .contact{
