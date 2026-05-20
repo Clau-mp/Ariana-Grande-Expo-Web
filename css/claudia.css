@@ -870,7 +870,25 @@ nav > ul {
    }
 
    /* HOME */
+   /* portada y publi */
 
+   .portada-img > img{
+    height: 30rem;
+   }
+
+   .portada-publi{
+    position: static;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+   }
+   .portada-publi-btn{
+    width: max-content;
+    padding: 0.7rem 2.5rem;
+   }
    /* about */
 
    #petal-experience-about{
@@ -959,7 +977,7 @@ nav > ul {
     padding: 5rem 0 6rem 0;
    }
    .opportunity-title{
-    font-size: 7.5vw;
+    font-size: 12vw;
     margin-bottom: 1.5rem;
    }
    .opportunity-text{
@@ -1050,6 +1068,28 @@ nav > ul {
         font-size: var(--fs-subtitle-desk);
     }
     /* HOME */
+
+    /* portada y publi */
+
+    .portada-img > img {
+        height: 22rem;
+    }
+    .portada-publi{
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+    }
+    .publi-text-subtitle{
+        font-size: 0.9rem;
+    }
+    .petal-experience-about-title{
+        font-size: 1.1rem;
+    }
+    .portada-publi-btn{
+        width: 80%;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+    }
 
     /*  about */
 
@@ -1145,7 +1185,7 @@ nav > ul {
         padding: 4rem 0 5rem 0;
     }
     .opportunity-title{
-        font-size: 2.8em;
+        font-size: 12vw;
         margin-bottom: 1.2rem;
         line-height: 1.2;
     }
