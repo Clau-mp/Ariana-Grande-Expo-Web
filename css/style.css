@@ -815,54 +815,55 @@ nav > ul {
 
 .about-intro {
     width: 95%;
-    max-width: 100%;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 7rem 0 5rem;
+    padding: 4.5rem 0 4rem;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 .about-text {
-    width: 60%;
+    width: 66%;
 }
 
 .about-text p {
-    font-size: var(--fs-about-text-desk);
+    font-size: 1.23rem;
     font-weight: var(--fw-regular);
-    line-height: 1.25;
-    margin-bottom: 1.5rem;
+    line-height: 1.45;
+    margin-bottom: 2.2rem;
 }
 
 .about-polaroids {
-    width: 28%;
+    width: 36%;
     position: relative;
-    min-height: 500px;
-    margin-right: 4rem;
+    min-height: 560px;
+    margin-right: 0;
 }
 
 .about-polaroids img {
-    width: 56%;
+    width: 50%;
     display: block;
     position: absolute;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38);
 }
 
 .about-polaroids img:first-child {
-    top: -1rem;
-    right: 1rem;
+    top: -5rem;
+    right: 1.5rem;
     transform: rotate(-8deg);
 }
 
 .about-polaroids img:nth-child(2) {
-    top: 7rem;
-    left: -2rem;
+    top: 5.8rem;
+    left: 0.5rem;
     transform: rotate(13deg);
 }
 
 .about-polaroids img:last-child {
-    top: 17rem;
+    top: 16.5rem;
     right: 1rem;
     transform: rotate(-10deg);
 }
