@@ -32,11 +32,16 @@ html{
     box-sizing: border-box;
     
 }
+/* GENERAL  */
 .home{
     background-color: var(--color-dark);
     padding-top: 11.5rem;
 }
 
+.contact{
+    background-color: var(--color-dark);
+    padding-top: 11.5rem;
+}
  /* BARRA DE NAVEGACIÓN */
  
 header{
@@ -597,10 +602,7 @@ nav > ul {
 }
 /* CONTACT */
 
-.contact{
-    background-color: var(--color-dark);
-    padding-top: 11.5rem;
-}
+
 .contact-container{
     width: 95%;
     max-width: 1500px;

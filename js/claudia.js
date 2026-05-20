@@ -45,8 +45,7 @@ function closeMenu() {
      document.getElementById("bar-icon").style.display = "block";
     document.getElementById("x-icon").style.display = "none";
 }
-}
-//  CARRUSEL
+//  CARRUSEL HOME
 window.addEventListener("load", function() {
     var contenedor = document.querySelector(".gallery-carrusel-container");
     var fotos = document.querySelectorAll(".carrusel-photo");
@@ -81,7 +80,7 @@ window.addEventListener("load", function() {
 
 });
 
-// MERCH
+// MERCH HOME
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector(".merch-carrusel");
 
