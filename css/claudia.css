@@ -870,6 +870,32 @@ nav > ul {
    }
 
    /* HOME */
+
+   /* about */
+
+   #petal-experience-about{
+    flex-direction: column;
+    gap: 3rem;
+    width: 90%;
+   }
+   .petal-experience-about-video{
+    max-width: 100%;
+   }
+   .petal-experience-about-video > video{
+    height: 400px;
+   }
+   .petal-experience-about-content{
+    align-items: center;
+   }
+   .petal-experience-about-title{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+   }
+   .petal-experience-about-text{
+    text-align: center;
+    font-size: 1rem;
+   }
+
     /* carrusel */
 
     #gallery-carrusel{
@@ -1024,6 +1050,29 @@ nav > ul {
         font-size: var(--fs-subtitle-desk);
     }
     /* HOME */
+
+    /*  about */
+
+    #petal-experience-about{
+        margin: 1rem auto;
+        gap: 2rem;
+    }
+    .petal-experience-about-video > video{
+        height: 250px;
+    }
+    .petal-experience-about-title{
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .petal-experience-about-text{
+        font-size: 0.98rem;
+        line-height: 1.5;
+    }
+    .petal-experience-about-bt{
+        width: 98%;
+        text-align: center;
+        box-sizing: border-box;
+    }
     /* carrusel */
 
     #gallery-carrusel{
