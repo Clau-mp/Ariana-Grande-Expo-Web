@@ -870,6 +870,10 @@ nav > ul {
    }
 
    /* HOME */
+
+   .home{
+    padding-top: 9.5rem;
+   }
    /* portada y publi */
 
    .portada-img > img{
@@ -1068,6 +1072,10 @@ nav > ul {
         font-size: var(--fs-subtitle-desk);
     }
     /* HOME */
+
+    .home{
+        padding-top: 7rem;
+    }
 
     /* portada y publi */
 
