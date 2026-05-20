@@ -202,6 +202,7 @@ nav > ul {
     height: auto;
     opacity: 0;
     animation: aparecerTexto 1.2s ease-out forwards;
+    pointer-events: none;
 }
 .AGPE-logo{
     width: 100%;
@@ -567,8 +568,6 @@ nav > ul {
     width: 100%;
     display: flex;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 
 }
 .opportunity-text{
@@ -589,7 +588,7 @@ nav > ul {
     padding: 1.1rem 3.5rem;
     border-radius: 50px;
     display: inline-block;
-    transition: all 0.3s ease; transform: 0.2s ease; ;
+    transition: all 0.3s ease; transform: 0.2s ease;
 }
 .opportunity_btn > a:hover{
     background-color: var(--color-white);
@@ -871,7 +870,35 @@ nav > ul {
    }
 
    /* HOME */
+    /* carrusel */
 
+    #gallery-carrusel{
+        padding: 4rem 0;
+        margin: 4rem auto;
+    }
+
+    .gallery-carrusel-window{
+        width: 60vw;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+    .gallery-carrusel-container{
+        gap: 2.5rem;
+        transform: none;
+    }
+    .carrusel-photo{
+        width: 60rem;
+        flex: 0 0 60vw;
+    }
+    .carrusel-photo > a{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .carrusel-photo > a > img {
+        height: 32rem;
+        object-fit: cover;
+        width: 100%;
+    }
    /* merch */
    #merch-section{
     padding: 2.5rem 0;
@@ -902,15 +929,15 @@ nav > ul {
 
    /* oportunity section */
 
-   #oportunity-section{
+   #opportunity-section{
     padding: 5rem 0 6rem 0;
    }
    .opportunity-title{
-    font-size: 5.6rem;
+    font-size: 7.5vw;
     margin-bottom: 1.5rem;
    }
    .opportunity-text{
-    font-size: calc(var(--fs-subtitle-desk)) * 0.85;
+    font-size: calc(var(--fs-subtitle-desk) * 0.85);
     margin-bottom: 2.5rem;
    }
    /*  CONTACT */
@@ -949,10 +976,10 @@ nav > ul {
 
     /* PANTALLA DE CARGA */
 
-    .AGPE-logo{
-        width: 75%;
-        max-width: 17.5rem;
-    }
+.AGPE-logo{
+   width: 75%;
+    max-width: 17.5rem;
+}
 
 .spotify-logo{
     position: fixed;
@@ -997,7 +1024,34 @@ nav > ul {
         font-size: var(--fs-subtitle-desk);
     }
     /* HOME */
+    /* carrusel */
 
+    #gallery-carrusel{
+        padding: 2rem 0;
+        margin: 2rem auto;
+    }
+    .gallery-carrusel-window{
+        width: 85vw;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+    .gallery-carrusel-container{
+        gap: 1.5rem;
+        transform: none;
+    }
+    .carrusel-photo{
+        width: 85vw;
+        flex: 0 0 85vw;
+    }
+    .carrusel-photo > a > img{
+        height: 24rem;
+        object-fit: cover;
+        width: 100%;
+    }
+    .carrusel-photo >a{
+        opacity: 1;
+        transform: scale(1);
+    }
     /* merch */
     #merch-section{
         padding: 2rem 0;
@@ -1007,6 +1061,7 @@ nav > ul {
         padding-left: 0 ;
         justify-content: center;
         margin-bottom: 1rem;
+        transform: none;
     }
     .merch-title{
         width: 170px;
@@ -1041,7 +1096,7 @@ nav > ul {
         padding: 4rem 0 5rem 0;
     }
     .opportunity-title{
-        font-size: 3rem;
+        font-size: 2.8em;
         margin-bottom: 1.2rem;
         line-height: 1.2;
     }

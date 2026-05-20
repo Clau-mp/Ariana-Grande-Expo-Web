@@ -31,6 +31,7 @@ window.onload = function(){
 
 
 // BARRA DE NAVEGACIÓN
+
 function openMenu() {
 
     document.getElementById("menu").style.left = "0";
@@ -44,7 +45,6 @@ function closeMenu() {
      document.getElementById("bar-icon").style.display = "block";
     document.getElementById("x-icon").style.display = "none";
 }
-
 //  CARRUSEL
 window.addEventListener("load", function() {
     var contenedor = document.querySelector(".gallery-carrusel-container");
@@ -63,11 +63,13 @@ window.addEventListener("load", function() {
         }
         var anchoFoto = fotos[0].offsetWidth;
         var espacioGap = parseFloat(window.getComputedStyle(contenedor).gap) || 0;
+        var anchoVentana = document.querySelector(".gallery-carrusel-window").offsetWidth;
         var desplazamiento = (anchoFoto + espacioGap) * (indiceActual - 1);
         contenedor.style.transform = "translateX(-" + desplazamiento + "px)";
     }
 
     moverCarrusel();
+    window.addEventListener("resize", moverCarrusel);
     setInterval(function(){
         indiceActual++;
         if(indiceActual >= fotos.length - 1){
